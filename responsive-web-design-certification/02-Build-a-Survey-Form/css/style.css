@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* VARIÁVEIS */
+
+:root {
+  --color-white: #f8f8f8;
+  --color-green: #63AB90;
+  --color-darkgreen: #3B6656;
+  --color-green-alpha: rgba(59, 102, 86, 0.9);
+  --color-black: #252525;
+  --font: 'Fira Sans', sans-serif;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+body, h1, p, label, input {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  border: none;
+}
+
+/* ESTILOS GERAIS */
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1em;
+  color: var(--color-white);
+}
+
+/* HEADER */
+.header {
+  margin: 0 auto;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+      115deg,
+      rgba(59, 102, 86, 0.8),
+      rgba(59, 102, 86, 0.5)
+    ),
+    url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+#title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+#description {
+  font-style: italic;
+  font-size: 1.125em;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 0.25em;
+}
+
+/* FORMULÁRIO */
+
+#survey-form {
+  max-width: 1200px;
+  margin: 1.75em auto;
+  background-color: var(--color-green-alpha);
+  border-radius: 10px;
+  padding: 4em;
+}
+
+.group-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-form::after {
+  content: '';
+  border-bottom: 3px dotted var(--color-white);
+  margin-top: 20px;
+}
+
+.group-form p {
+  font-weight: bold;
+  font-size: 1.125em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.group-form label {
+  font-size: 1.125em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#name-label, #email-label, #number-label {
+  font-weight: bold;
+}
+
+.group-form input[type="text"], input[type="email"], input[type="number"], input[type="checkbox"], textarea {
+  color: var(--color-black);
+}
+
+.group-form input[type="text"], input[type="email"], input[type="number"] {
+  padding: 15px;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+}
+
+#most-like, #dropdown {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.group-form textarea {
+  font-family: 'Fira Sans', sans-serif;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 250px;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+#submit {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  padding: 20px;
+  background: var(--color-green);
+  color: var(--color-white);
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background: var(--color-white);
+  color: var(--color-green);
+  cursor: pointer;
+  transition: color 300ms;
+  transition: background 300ms;
+}
